@@ -1,0 +1,21 @@
+import java.util.List;
+import java.util.StringTokenizer;
+
+public class Operaciones {
+
+	public static void main(String[] args) {
+		new Operaciones();
+	}
+
+	public Operaciones() {
+
+	}
+
+// 6
+	public static int compareTwoNumbers(int n1, int n2) {
+		if (n1 > n2)
+			return 1;
+		else if (n1 < n2)
+			return -1;
+		return 0;
+	}
