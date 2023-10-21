@@ -1,0 +1,32 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestEjercicio2 {
+	
+	//Test para verificar el N1 sea mayor y se espera un 5
+	@Test
+    void TestVerificarN1esMayor() {
+        int result = Ejercicio2.findHighestNumber(5, 3, 2);
+        assertEquals(5, result);
+    }
+	
+	//Test para verificar el N2 sea mayor y se espera un 3
+    @Test
+    void TestVerificarN2esMayor() {
+        int result = Ejercicio2.findHighestNumber(2, 5, 3);
+        assertEquals(3, result);
+    }
+	//Test para verificar el N3 sea mayor y se espera un 9
+    @Test
+    void TestVerificarN3esMayor() {
+        int result = Ejercicio2.findHighestNumber(1, 2, 9);
+        assertEquals(9, result);
+    }
+	//Test para verificar el N3 sea mayor y se espera un 7
+    @Test
+    void TestVerificarCuando2ValenIgual() {
+        int result = Ejercicio2.findHighestNumber(5, 7, 7);
+        assertEquals(7, result);
+    }
+}
