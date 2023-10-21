@@ -1,0 +1,27 @@
+import java.util.List;
+import java.util.StringTokenizer;
+
+public class Operaciones {
+
+	public static void main(String[] args) {
+		new Operaciones();
+	}
+
+	public Operaciones() {
+
+	}
+	// 10
+	public static int add(List<Integer> numbers) {
+		if (numbers == null || numbers.isEmpty()) {
+			throw new NullPointerException();
+		}
+		int sum = 0;
+		for (int i = 0; i < numbers.size(); i++) {
+			sum += numbers.get(i);
+		}
+		return sum;
+	}
+}
+
+// SOLUCIÓN
+
