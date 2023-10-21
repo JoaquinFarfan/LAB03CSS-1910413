@@ -1,0 +1,48 @@
+package problema9;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+class problema9test {
+
+// Prueba si el método elimina duplicados en una lista con duplicados.
+@Test
+    public void pruebaEliminarDuplicadosConDuplicados() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 2, 3, 4, 4, 5));
+        Codigo.removeDuplicates(numbers);
+        List<Integer> expected = Arrays.asList(1, 2, 3, 4, 5);
+        assertEquals(expected, numbers);
+    }
+    // Prueba si el método no elimina ningún elemento en una lista que no contiene duplicados.
+    @Test
+    public void pruebaEliminarDuplicadosSinDuplicados() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        Codigo.removeDuplicates(numbers);
+        List<Integer> expected = Arrays.asList(1, 2, 3, 4, 5);
+        assertEquals(expected, numbers);
+    }
+
+    // Prueba si el método funciona correctamente con una lista vacía.
+    @Test
+    public void pruebaEliminarDuplicadosConListaVacia() {
+
+        List<Integer> numbers = new ArrayList<>();
+        Codigo.removeDuplicates(numbers);
+        List<Integer> expected = new ArrayList<>();
+        assertEquals(expected, numbers);
+    }
+
+    // Prueba si el método funciona correctamente con una lista que contiene un solo elemento.
+    @Test
+    public void pruebaEliminarDuplicadosConUnSoloElemento() {
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1));
+        Codigo.removeDuplicates(numbers);
+        List<Integer> expected = Arrays.asList(1);
+        assertEquals(expected, numbers);
+    }
+
