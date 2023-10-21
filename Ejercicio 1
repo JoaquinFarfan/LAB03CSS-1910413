@@ -23,6 +23,6 @@ public class Operaciones {
 			return n + addFirstNumbersException(n - 1);
 	}
 
-
-#SOLUCIÓN
+}
+//SOLUCIÓN
 
