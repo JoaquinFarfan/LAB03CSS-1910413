@@ -1,0 +1,28 @@
+// Prueba si el método devuelve 0 cuando los dos números son iguales
+@Test
+    public void pruebaCompararNumerosIguales() {
+        int resultado = codigo6.compareTwoNumbers(5, 5);
+        assertEquals(0, resultado);
+    }
+
+    // Prueba si el método devuelve 1 cuando el primer número es mayor que el segundo.
+    @Test
+    public void pruebaCompararPrimerNumeroMayor() {
+        int resultado = codigo6.compareTwoNumbers(10, 5);
+        assertEquals(1, resultado);
+    }
+
+    // Prueba si el método devuelve -1 cuando el segundo número es mayor que el primero.
+    @Test
+    public void pruebaCompararSegundoNumeroMayor() {
+        int resultado = codigo6.compareTwoNumbers(3, 7);
+        assertEquals(-1, resultado);
+    }
+
+
+    // Prueba si el método funciona correctamente con números negativos y devuelve 1 cuando el primer número es mayor que el segundo.
+    @Test
+    public void pruebaCompararNegativos() {
+        int resultado = codigo6.compareTwoNumbers(-2, -5);
+        assertEquals(1, resultado);
+    }
