@@ -15,5 +15,5 @@ public class Operaciones {
 	public static int calculateCube(int n) {
 		return n * n * n;
 	}
-
+}
 //SOLUCIÓN
