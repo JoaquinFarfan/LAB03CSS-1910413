@@ -1,0 +1,36 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestEjercicio3 {
+
+	//Test para que se ingrese un arreglo con numeros positivos y se espera un 5
+	 @Test
+	    void TestparaArreglosPositivos() {
+	        int[] arr = {1, 3, 5, 2, 4};
+	        int result = Ejercicio3.findMaxNumber(arr);
+	        assertEquals(5, result);
+	    }
+		//Test para que se ingrese un arreglo con numeros negativos y se espera un -1
+	    @Test
+	    void TestparaArreglosNegativos() {
+	        int[] arr = {-5, -3, -1, -2, -4};
+	        int result = Ejercicio3.findMaxNumber(arr);
+	        assertEquals(-1, result);
+	    }
+		//Test para que se ingrese un arreglo con Solo un numero y se espera un 7
+	    @Test
+	    void TestparaArregloConSoloElemento() {
+	        int[] arr = {7};
+	        int result = Ejercicio3.findMaxNumber(arr);
+	        assertEquals(7, result);
+	    }
+		//Test para que se ingrese un arreglo sin elementos y se espera que se encuentre el maximo valor del arreglo
+	    @Test
+	    void TestParaArregloVacio() {
+	        int[] arr = {};
+	        assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
+	            Ejercicio3.findMaxNumber(arr);
+	        });
+	    }
+	}
