@@ -1,0 +1,25 @@
+public class Operaciones {
+
+	public static void main(String[] args) {
+		new Operaciones();
+	}
+
+	public Operaciones() {
+
+	}
+
+	// https://junit.org/junit5/docs/current/user-guide/
+
+	// 2
+	public static int findHighestNumber(int n1, int n2, int n3) {
+		if (n1 > n2 && n1 > n3) {
+			return n1;
+		} else if (n3 > n2) {
+			return n3;
+		} else {
+			return n3;
+		}
+	}
+
+
+#solución
