@@ -1,0 +1,47 @@
+package a;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Problema4_Test {
+	
+	//Se ingreso el numero "0" esperando la salida "0"
+
+	@Test
+    public void testCalculandoCero() {
+        int n = 0;
+        int result = Problema4.calculateCube(n);
+        assertEquals(0, result);
+    }
+	
+	//Se ingreso el numero negativo "-5" esperando la salida "-125"
+	
+	@Test
+    public void testCalculandoNegativo() {
+        int n = -5;
+        int result = Problema4.calculateCube(n);
+        assertEquals(-125, result);
+    }
+	
+	//Se ingreso el numero "8" esperando la salida "512"
+	
+	@Test
+    public void testCalculadoPositivo() {
+        int n = 8;
+        int result = Problema4.calculateCube(n);
+        assertEquals(512, result);
+    }
+	
+	//Se ingreso el numero grande "500" esperando la salida "125000000"
+	
+	@Test
+    public void testCalculandoNumeroGrande() {
+        int n = 500;
+        int result = Problema4.calculateCube(n);
+        assertEquals(125000000, result);
+    }
+	
+	
+
+}
