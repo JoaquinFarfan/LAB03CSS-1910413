@@ -1,0 +1,47 @@
+package a;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Problema5_Test {
+
+	//se dejo la entrada en blanco "" esperando la salida ""
+	
+	@Test
+    public void testPalabraVacio() {
+        String input = "";
+        String result = Problema5.reverseWord(input);
+        assertEquals("", result);
+    }
+	
+	//Se ingreso con mayusculas "el gato negro" esperando la salida "oTaG"
+	
+	@Test
+    public void testPalabraMayusculas() {
+        String input = "El GaTo NeGrO";
+        String result = Problema5.reverseWord(input);
+        assertEquals("lE oTaG OrGeN ", result);
+        
+    
+    }
+	
+	//Se ingreso "el gato negro" esperando la salida "otag"
+	
+	@Test
+    public void testPalabraInverso() {
+        String input = "el gato negro";
+        String result = Problema5.reverseWord(input);
+        assertEquals("le otag orgen ", result);
+    }
+	
+	//Se ingreso "el la gato" esperando la salida "radar"
+	
+	@Test
+    public void testPalabra2() {
+        String input = "el la gato";
+        String result = Problema5.reverseWord(input);
+        assertEquals("le al otag ", result);
+    }
+
+}
