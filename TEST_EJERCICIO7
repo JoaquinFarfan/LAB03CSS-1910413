@@ -1,0 +1,41 @@
+package problemax;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class problematest {
+
+@Test
+	public void testArrayDesordenada() {
+	        // Caso de prueba 1: Array desordenado
+	        int[] array1 = {3, 1, 5, 2, 4};
+	        problemanumx.sortArray(array1);
+	        int[] expected1 = {1, 2, 3, 4, 5};
+	        assertArrayEquals(expected1, array1);
+			}
+	@Test
+	public void testArrayOrdenada() {
+	        // Caso de prueba 2: Array ya ordenado
+	        int[] array2 = {1, 2, 3, 4, 5};
+	        problemanumx.sortArray(array2);
+	        int[] expected2 = {1, 2, 3, 4, 5};
+	        assertArrayEquals(expected2, array2);
+	        }
+	@Test
+	public void testArrayVacio() {
+	        // Caso de prueba 3: Array vacío
+	        int[] array3 = {};
+	        problemanumx.sortArray(array3);
+	        int[] expected3 = {};
+	        assertArrayEquals(expected3, array3);
+	 }
+	@Test
+	public void testArrayNumNegativos() {
+	// Caso de prueba 4: Array con números negativos
+		int[] array1 = {-3, 1, -5, 2, -4};
+        problemanumx.sortArray(array1);
+        int[] expected1 = {-5, -4, -3, 1, 2};
+        assertArrayEquals(expected1, array1);
+	}
+
