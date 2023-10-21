@@ -1,0 +1,41 @@
+package tarea;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import java.util.Arrays;
+import java.util.List;
+
+
+
+//10
+
+class ejercicio {
+	//Se pasa una lista de numeros enteros positivos, si la funcion devuelve un 10. pasa
+    @Test
+    void PruebaAgregarNumerosPositivos() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
+        assertEquals(10, problema10.add(numbers));
+    }
+    //Se pasa una lista de numeros enteros negativos, si la funcion devuelve un -10, pasa
+    @Test
+    void PruebaAgregarNumerosNegativos() {
+        List<Integer> numbers = Arrays.asList(-1, -2, -3, -4);
+        assertEquals(-10, problema10.add(numbers));
+    }
+    //Se pasa una lista de numeros enteros que contengan tanto numeros negativos como positivos, si devuelve un 2, pasa
+    @Test
+    void PruebaAgregarConPositivosNegativos() {
+        List<Integer> numbers = Arrays.asList(-1, 2, -3, 4);
+        assertEquals(2, problema10.add(numbers));
+    } 
+    //Cuando se pasa una lista nula 
+    @Test
+    void PruebaConNulo() {
+        assertThrows(NullPointerException.class, () -> {
+        	problema10.add(null);
+        });
+    }
+    
+    
+    
+}
