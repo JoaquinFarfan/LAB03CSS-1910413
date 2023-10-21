@@ -1,0 +1,32 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestEjercicio1 {
+	//Test para verificar el NUMERO POSITOV y se espera un 15
+	@Test
+    void TestParaNumPositivo() {
+        int result = Ejercicio1.addFirstNumbersException(5);
+        assertEquals(15, result);
+    }
+	//Test para verificar el NUMERO SEA = 0 y se espera un 0
+    @Test
+    void TestCuandoes0() {
+        int result = Ejercicio1.addFirstNumbersException(0);
+        assertEquals(0, result);
+    }
+	//Test para verificar el NUMERO SEA NEGATIVO y se espera un -10
+    @Test
+    void TestParaNumeroNegativo() {
+        assertThrows(ArithmeticException.class, () -> {
+        	Ejercicio1.addFirstNumbersException(-10);
+        });
+    }
+	//Test para verificar el NUMERO SEA MUY GRANDE y se espera un 50005000
+    @Test
+    void TestParaValoresGrandes() {
+        int result = Ejercicio1.addFirstNumbersException(10000);
+        assertEquals(50005000, result);
+    }
+
+}
