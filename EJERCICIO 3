@@ -20,3 +20,6 @@ public class Operaciones {
 		}
 		return max;
 	}
+}
+
+//solución
